@@ -25,12 +25,12 @@ header a {
     padding: 12px 14px;
     font-size: 20px;
     text-decoration: none;
-    right: 0;
-    top: 0;
+    display: block;
 }
 
 .header a.icon {
     position: absolute;
+    display: block;
     right: 0;
     top: 0;
 }
