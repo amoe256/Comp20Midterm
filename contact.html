@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="Author" content="Andreas">
+    <meta name="Date" content="3/3/2020">
+    <meta name=Assignment content="Comp20 Midterm">
+    <meta name="Description" content="Contact Us">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <link rel="stylesheet" type="text/css" href="contact.css"/>
+    <title> Contact Us </title>
+    <script language="javascript">
+        function navFunction() {
+            var links = document.getElementById("navbar");
+            if (links.style.display == "block") {
+                links.style.display = "none";
+            } else {
+                links.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1 style="text-align: center;"> Galleria </h1>
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about.html">About</a></li>
+            <li><a href="#contact.html">Contact</a></li>
+            <li><a href="#portfolio.html">Portfolio</a></li>
+            <li><a href="#services.html">Services</a></li>
+            <li><a href="#review.html">Review</a></li>
+        </ul>
+    </div>
+    <section id="contact_us" style="margin-left:10%; width: 500px;">
+        <h2>Let's get in touch!</h2><br /> 
+        <form onsubmit="return validate()">
+            <p>Name*: <input type="text" name="name"></p>
+            <p>Email*: <input type="text" name="email"></p>
+            <p>Phone*: <input type="text" name="phone"></p>
+            <p>Question*: <input type="text" name="question"></p>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <script language="javascript">
+        function validate()
+        {
+            form = document.forms[0];
+            if (form.name.value == "") {
+                form.name.value = "Name is required";
+                form.name.select();
+                return false;
+            }
+            if (form.email.value == "") {
+                form.email.value = "Email is required";
+                form.email.select();
+                return false;
+            }
+            if (form.phone.value == "") {
+                form.phone.value = "Phone is required";
+                form.phone.select();
+                return false;
+            }
+            var regexPhone = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+            if (!regexPhone.test(form.phone.value)) {
+                form.phone.value = "Invalid number";
+                form.phone.select();
+                return false;
+            }
+            // TO-DO: VALIDATE EMAIL
+            if (form.question.value == "") {
+                form.question.value = "Question is required";
+                form.question.select();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <footer>
+        <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+    </footer>
+</body>
