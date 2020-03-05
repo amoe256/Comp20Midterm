@@ -37,15 +37,62 @@
         </ul>
     </div>
     <section id="contact_us" style="margin-left:10%; width: 500px;">
-        <h2>Let's get in touch!</h2><br /> 
-        <form onsubmit="return validate()">
-            <p>Name*: <input type="text" name="name"></p>
-            <p>Email*: <input type="text" name="email"></p>
-            <p>Phone*: <input type="text" name="phone"></p>
-            <p>Question*: <input type="text" name="question"></p>
-            <input type="submit" value="Submit">
-        </form>
+        <h2>Let's get in touch!</h2>
+        <p>We're located at 123 Main St, Boston, MA</p>
+        <p style="margin-bottom: 50px;">To reach us on the phone, call 555-555-5555</p>
+        <p>These are our hours:</p> 
+        <table id="hours">
+            <tr>
+                <td>Monday</td>
+                <td>9:00 - 17:00</td>
+            <tr>
+                <td>Tuesday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+        </table>
     </section>
+    <div>
+        <form onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>Name*:</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Email*:</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Phone*:</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>Question*:</td>
+                    <td><input type="text" name="question"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
     <script language="javascript">
         function validate()
         {

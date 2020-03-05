@@ -4,8 +4,13 @@ body {
 }
 
 h1 {
-    size: 40px;
+    font-size: 40px;
     margin: auto;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
 }
 
 .header {
