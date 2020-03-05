@@ -60,6 +60,12 @@
                 form.email.select();
                 return false;
             }
+            var regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            if (!regexEmail.test(form.email.value)) {
+                form.email.value = "Invalid email";
+                form.email.select();
+                return false;
+            }
             if (form.phone.value == "") {
                 form.phone.value = "Phone is required";
                 form.phone.select();
@@ -71,7 +77,6 @@
                 form.phone.select();
                 return false;
             }
-            // TO-DO: VALIDATE EMAIL
             if (form.question.value == "") {
                 form.question.value = "Question is required";
                 form.question.select();
