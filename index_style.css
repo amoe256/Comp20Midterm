@@ -12,7 +12,7 @@ h1 {
     margin: auto;
     overflow: hidden;
     background-color: white;
-    position: sticky;
+    position: relative;
     border-bottom: steelblue;
 }
 
@@ -28,27 +28,11 @@ h1 {
     display: block;
 }
 
-.header label,
-#hamburger {
-    display: none;
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 .header a.icon {
     position: absolute;
     display: block;
     right: 0;
     top: 0;
-}
-
-.aboutLink {
-    text-decoration: none;
-    color: #000;
 }
 
 .navbar a:hover {
@@ -61,10 +45,28 @@ h1 {
     color: white;
 }
 
+.aboutLink {
+    text-decoration: none;
+    color: #000;
+}
+
+section.welcome_description {
+    margin-left: 20%;
+    width: 500px;
+}
+
+#slideshow {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
 footer {
     background-color: white;
     width: 100%;
     text-align: center;
     font-size: 12px;
     display: block;
+    position: fixed;
+    bottom: 0;
 }
