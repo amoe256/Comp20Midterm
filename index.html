@@ -16,19 +16,20 @@
 
 
 <body>
-    <header>
+    <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
-        <a href="#Home" class="active">Home</a>
-        <div id="navbar">
-            <a href="#about.html">About</div>
-            <a href="#contact.html">Contact</div>
-            <a href="#portfolio.html">Portfolio</div>
-            <a href="#services.html">Services</div>
-            <a href="##review.html">Review</div>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="navFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <div class = "header">
+            <a href="#Home" class="active">Home</a>
+            <div id="navbar">
+                <a href="#about.html">About</a>
+                <a href="#contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#services.html">Services</a>
+                <a href="#review.html">Review</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
             <script language="javascript">
                 function navFunction() {
                     var links = document.getElementById("navbar");
@@ -39,6 +40,7 @@
                     }
                 }
             </script>
+        </div>
     </header>
     <section id="welcome_description" style="margin-left:20%; width: 500px;">
         <h2> Welcome to Galleria</h2><br /> At Galleria, we're making arts and exhibitions more interactive than ever before. Want to learn more about us?
