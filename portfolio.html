@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="Author" content="Katya Thorup">
+    <meta name="Date" content="3/3/2020">
+    <meta name=Assignment content="Comp20 Midterm">
+    <meta name="Description" content="Galleria">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <title> Portfolio </title>
+
+    <style type="text/css">
+        .row, .column {box-sizing: border-box;}
+        .row {display: flex;}
+        .column {flex: 33.3%; padding: 10px;}
+        img {width: 100%; height: auto;}
+        .external_link {text-decoration: none; padding-left: 10px; color: black; font-weight: bold;}
+        h2 {padding-left: 10px; padding-top: 20px; margin-bottom: 0px;}
+        .name, .bio {text-align: center; color: steelblue;}
+        section {background-color: lightgrey; margin-bottom: 10px;}
+        .nav2 a {text-decoration: none; font-size: 20px; margin: 10px; color: steelblue;}
+        .nav2 a:first-child {margin-right: 10%;}
+        .nav2 a:last-child {margin-left: 10%;}
+        .nav2 {text-align: center;}
+
+        @media(max-width: 450px) {
+            .nav2 a:first-child {margin-right: 10px;}
+            .nav2 a:last-child {margin-left: 10px;}
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header class="top">
+        <h1 style="text-align: center;"> Our Artists </h1>
+        <div class="header">
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about.html">About</a>
+                <a href="#contact.html">Contact</a>
+                <a href="#services.html">Services</a>
+                <a href="#review.html">Review</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <script language="javascript">
+                function navFunction() {
+                    var links = document.getElementById("navbar");
+                    if (links.style.display == "block") {
+                        links.style.display = "none";
+                    } else {
+                        links.style.display = "block";
+                    }
+                }
+            </script>
+        </div>
+        <div class="nav2">
+            <a href="#paintings.html">Paintings</a>
+            <a href="#sculptures.html">Sculptures</a>
+            <a href="#photographs.html">Photographs</a>
+        </div>
+    </header>
+    <section id="painters">
+        <h2> Painters </h2>
+        <div class="row">
+            <div class="column"> 
+                <img src="Andrew.jpg" id="Andrew"/>
+                <div class="name"> Andrew Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Ryan.jpg" id="Ryan"/>
+                <div class="name"> Ryan Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Gavin.jpg" id="Gavin"/>
+                <div class="name"> Gavin Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+        </div>
+        <a class="external_link" href="#paintings.html">Click here to look at our work</a>
+    </section>
+    <section id="sculptures">
+        <h2> Sculptures </h2>
+        <div class="row">
+            <div class="column"> 
+                <img src="Andrew.jpg" id="Andrew"/>
+                <div class="name"> Andrew Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Ryan.jpg" id="Ryan"/>
+                <div class="name"> Ryan Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Gavin.jpg" id="Gavin"/>
+                <div class="name"> Gavin Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+        </div>
+        <a class="external_link" href="#sculptures.html">Click here to look at our work</a>
+    </section>
+
+    <section id="sculptures">
+        <h2> Photographers </h2>
+        <div class="row">
+            <div class="column"> 
+                <img src="Andrew.jpg" id="Andrew"/>
+                <div class="name"> Andrew Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Ryan.jpg" id="Ryan"/>
+                <div class="name"> Ryan Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+            <div class="column"> 
+                <img src="Gavin.jpg" id="Gavin"/>
+                <div class="name"> Gavin Thorup </div>
+                <p class="bio"> Grew up in Florida. Love painting landscapes and animals </p>
+            </div>
+        </div>
+        <a class="external_link" href="#photographs.html">Click here to look at our work</a>
+    </section>
+
+    <footer>
+        <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+    </footer>
+</body>

@@ -25,18 +25,8 @@
 <body>
     <div class="header">
         <h1 style="text-align: center;"> Galleria </h1>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger" />
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about.html">About</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-            <li><a href="#portfolio.html">Portfolio</a></li>
-            <li><a href="#services.html">Services</a></li>
-            <li><a href="#review.html">Review</a></li>
-        </ul>
     </div>
-    <section id="contact_us" style="margin-left:10%; width: 500px;">
+    <section id="contact_us" style="margin-left:10%; width: 500px; display: inline-block;">
         <h2>Let's get in touch!</h2>
         <p>We're located at 123 Main St, Boston, MA</p>
         <p style="margin-bottom: 50px;">To reach us on the phone, call 555-555-5555</p>
@@ -71,24 +61,25 @@
             </tr>
         </table>
     </section>
-    <div>
+    <div style="display: inline-block; position: absolute;">
+        <p style="position: relative; margin-top: 192px">Or shoot us an email:</p>
         <form onsubmit="return validate()">
             <table>
                 <tr>
                     <td>Name*:</td>
-                    <td><input type="text" name="name"></td>
+                    <td><input type="text" name="name" id="name"></td>
                 </tr>
                 <tr>
                     <td>Email*:</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="text" name="email" id="email"></td>
                 </tr>
                 <tr>
                     <td>Phone*:</td>
-                    <td><input type="text" name="phone"></td>
+                    <td><input type="text" name="phone" id="phone"></td>
                 </tr>
                 <tr>
-                    <td>Question*:</td>
-                    <td><input type="text" name="question"></td>
+                    <td style="vertical-align: top;">Question*:</td>
+                    <td><input type="text" name="question" id="question"></td>
                 </tr>
             </table>
         </form>
