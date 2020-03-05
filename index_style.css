@@ -17,7 +17,7 @@ h2 {
     margin: auto;
     overflow: hidden;
     background-color: white;
-    position: sticky;
+    position: relative;
     border-bottom: steelblue;
 }
 
@@ -33,27 +33,11 @@ h2 {
     display: block;
 }
 
-.header label,
-#hamburger {
-    display: none;
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 .header a.icon {
     position: absolute;
     display: block;
     right: 0;
     top: 0;
-}
-
-.aboutLink {
-    text-decoration: none;
-    color: #000;
 }
 
 .navbar a:hover {
@@ -62,7 +46,13 @@ h2 {
 }
 
 .active {
+    background-color: white;
     color: white;
+}
+
+.aboutLink {
+    text-decoration: none;
+    color: #000;
 }
 
 section.welcome_description {
@@ -82,4 +72,6 @@ footer {
     text-align: center;
     font-size: 12px;
     display: block;
+    position: fixed;
+    bottom: 0;
 }
