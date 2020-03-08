@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="Author" content="Katya Thorup">
+    <meta name="Date" content="3/3/2020">
+    <meta name=Assignment content="Comp20 Midterm">
+    <meta name="Description" content="Galleria">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <link rel="stylesheet" type="text/css" href="portfolio_style.css" />
+    <title> Gallery </title>
+
+    <style type="text/css">
+        .row, .column {box-sizing: border-box;}
+        .row {display: flex; justify-content: space-around;}
+        .column {flex: 33.33%; padding: 10px;}
+        img {width: 100%; height: auto;}
+        h2 {padding-left: 10px; padding-top: 20px; margin-bottom: 0px;}
+        section {background-color: lightgrey; margin-bottom: 10px; display: block;}
+    </style>
+
+</head>
+
+
+<body>
+
+    <header class="top">
+        <h1 style="text-align: center;"> Our Gallery </h1>
+        <div class="header">
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about.html">About</a>
+                <a href="#contact.html">Contact</a>
+                <a href="#services.html">Services</a>
+                <a href="#review.html">Review</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <script language="javascript">
+                function navFunction() {
+                    var links = document.getElementById("navbar");
+                    if (links.style.display == "block") {
+                        links.style.display = "none";
+                    } else {
+                        links.style.display = "block";
+                    }
+                }
+            </script>
+        </div>
+        <div class="nav2">
+            <a href="portfolio.html">Artists Overview</a>
+            <a href="paintings.html" class="active">Paintings</a>
+            <a href="sculptures.html">Sculptures</a>
+            <a href="photographs.html">Photographs</a>
+        </div>
+    </header>
+
+    <script language="javascript">
+        function photo(source, atr, artist, name) {
+            this.source = source;
+            this.atr = atr;
+            this.artist = artist;
+            this.name = name;
+        }
+
+        function printRows(picture_array) {
+            var str = "";
+            for (i = 0; i < picture_array.length; i+=4) {
+                str += "<div class='row'>";
+                str += printColumns(i, picture_array);
+                str += "</div>";
+            }
+            return str;
+        }
+
+        function printColumns(index, array) {
+            num = array.length - index;
+            max_index = index + 4;
+
+            // If statement used to determine whether index + 3 will exceed length of the array
+            if ((array.length - index) >= 4) {
+                num = index + 4;
+            }
+            else {
+                num = index + num;
+            }
+
+            var str = "";
+            while (index < num) {
+                str += "<div class='column'>";
+                str += "<img src='" + array[index].source +"' attribute='" + array[index].atr + "'/>";
+                str += "</div>";
+                index += 1;
+            }
+
+            /* Putting in blank columns to make it 4 columns per row (keeps sizing for the columns
+            proportional) */
+            while (index < max_index) {
+                str += "<div class='column'></div>";
+                index +=1;
+            }
+            return str;
+        }
+    </script>
+
+    <section id="people">
+        <h2> People </h2>
+        <script language="javascript">
+            head_array = new Array (
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+            )
+            document.writeln(printRows(head_array));
+        </script>
+    </section>
+
+    <section id="events">
+        <h2> Event Photographs </h2>
+        <script language="javascript">
+            head_array = new Array (
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+            )
+            document.writeln(printRows(head_array));
+        </script>
+
+    </section>
+    <section id="abstract">
+        <h2> Abstract Photos </h2>
+        <script language="javascript">
+            head_array = new Array (
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+            )
+            document.writeln(printRows(head_array));
+        </script>
+    </section>
+
+    <section id="landscapes">
+        <h2> Nature / Landscapes </h2>
+        <script language="javascript">
+            head_array = new Array (
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
+                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+            )
+            document.writeln(printRows(head_array));
+        </script>
+    </section>
+    <br/>
+
+    <footer>
+        <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+    </footer>
+</body>
