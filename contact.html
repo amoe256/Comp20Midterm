@@ -11,32 +11,22 @@
     <link rel="stylesheet" type="text/css" href="index_style.css" />
     <link rel="stylesheet" type="text/css" href="contact.css"/>
     <title> Contact Us </title>
-    <script language="javascript">
-        function navFunction() {
-            var links = document.getElementById("navbar");
-            if (links.style.display == "block") {
-                links.style.display = "none";
-            } else {
-                links.style.display = "block";
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="header">
+    <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger" />
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about.html">About</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-            <li><a href="#portfolio.html">Portfolio</a></li>
-            <li><a href="#services.html">Services</a></li>
-            <li><a href="#review.html">Review</a></li>
-        </ul>
-    </div>
-    <section id="contact_us" style="margin-left:10%; width: 500px;">
+        <div class = "header">
+            <a href="index.html" class="active">Home</a>
+            <div id="navbar">
+                <a href="#about.html">About</a>
+                <a href="#contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#services.html">Services</a>
+                <a href="#review.html">Review</a>
+            </div>
+        </div>
+    </header>
+    <div id="contact-info-container">
         <h2>Let's get in touch!</h2>
         <p>We're located at 123 Main St, Boston, MA</p>
         <p style="margin-bottom: 50px;">To reach us on the phone, call 555-555-5555</p>
@@ -70,27 +60,29 @@
                 <td>9:00 - 17:00</td>
             </tr>
         </table>
-    </section>
-    <div>
+    </div>
+    <div id="form-container">
+        <p>Or you can email us!</p>
         <form onsubmit="return validate()">
             <table>
                 <tr>
                     <td>Name*:</td>
-                    <td><input type="text" name="name"></td>
+                    <td><input type="text" name="name" id="name"></td>
                 </tr>
                 <tr>
                     <td>Email*:</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="text" name="email" id="email"></td>
                 </tr>
                 <tr>
                     <td>Phone*:</td>
-                    <td><input type="text" name="phone"></td>
+                    <td><input type="text" name="phone" id="phone"></td>
                 </tr>
                 <tr>
-                    <td>Question*:</td>
-                    <td><input type="text" name="question"></td>
+                    <td style="vertical-align: top;">Question*:</td>
+                    <td><input type="text" name="question" id="question"></td>
                 </tr>
             </table>
+            <input type="submit" value="Submit" style="width: 75px;">
         </form>
     </div>
     <script language="javascript">

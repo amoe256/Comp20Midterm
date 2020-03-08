@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Date" content="3/1/2020">
+    <meta name=Assignment content="Comp20 Midterm">
+    <meta name="Description" content="Galleria">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Galleria
+    </title>
+    <script language="javascript">
+        function navFunction() {
+            var links = document.getElementById("navbar");
+            if (links.style.display == "block") {
+                links.style.display = "none";
+            } else {
+                links.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <header class="top">
+        <h1 style="text-align: center;"> Galleria </h1>
+        <div class="header">
+            <a href="index.html" class="active">Home</a>
+            <div id="navbar">
+                <a href="#about.html">About</a>
+                <a href="#contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#services.html">Services</a>
+                <a href="#review.html">Review</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <script language="javascript">
+                function navFunction() {
+                    var links = document.getElementById("navbar");
+                    if (links.style.display == "block") {
+                        links.style.display = "none";
+                    } else {
+                        links.style.display = "block";
+                    }
+                }
+            </script>
+        </div>
+        <div>
+            <p> Reviews: </p>
+            <p style="font-size: 10px; padding-bottom: 15px;">"Andrew taught me so much about art in such a short period of time! Not only did I learn how to paint, but my appreciation for art has increased significantly!"- Johnny Appleseed</p>
+            <p style="font-size: 10px; padding-bottom: 15px;">"Ryan's artwork belongs in MoMA"- Jane Doe</p>
+            <p style="font-size: 10px; padding-bottom: 15px;">"Gavin helped me sculpt work that I am proud of"- Richard Miles</p>
+
+        </div>
+        <div>
+            <p>Write your own: </p>
+        </div>
+        <div style="padding-bottom: 10px;">
+            <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 100px;" type="text" id="txtName" placeholder="Enter your name" />
+        </div>
+        <div style="padding-bottom: 10px;">
+            <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px;" type="text" id="txtEmail" placeholder="Enter your email address" />
+        </div>
+
+        <div style="padding-bottom: 20px;">
+            <select id="selArtist">
+                <option selected value="">-- Choose the artist --</option>
+                <option value="Ryan">Ryan</option>
+                <option value="Gavin">Gavin</option>
+                <option value="Andrew">Andrew</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 20px;">
+            <textarea id="msg" style="font-family: 'Contrail One', 'Ariel'; height: 250px;  width: 350px;" name="msg" placeholder="Write a review ..."></textarea>
+        </div>
+        <div style="padding-bottom: 20px;">
+            <input type="button" id="bt" value="Submit" onclick="saveFile()" />
+        </div>
+
+        </div>
+</body>
+<script>
+    let saveFile = () => {
+
+        // Get the data from each element on the form.
+        const name = document.getElementById('txtName');
+        const email = document.getElementById('txtEmail');
+        const artist = document.getElementById('selArtist');
+        const msg = document.getElementById('msg');
+
+        // This variable stores all the data.
+        let data =
+            '\r Name: ' + name.value + ' \r\n ' +
+            'Email: ' + email.value + ' \r\n ' +
+            'artist: ' + artist.value + ' \r\n ' +
+            'Message: ' + msg.value;
+
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], {
+            type: 'text/plain'
+        });
+        const sFileName = 'formData.txt'; // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        } else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click();
+    }
+</script>
+</header>
+
+<section id="reviews" style="margin-left:10%; width: 500px;">
+    <h2></h2>
+</section>
+<footer>
+    <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+</footer>
+</body>
