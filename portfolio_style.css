@@ -20,4 +20,5 @@
     .row {flex-direction: column;}
     .column {flex: 100%;}
     h1 {font-size: 25px;}
+    aside {display: none;}
 }
