@@ -18,7 +18,7 @@
         .row {display: flex; justify-content: space-around;}
         .column {flex: 33.33%; padding: 10px;}
         img {width: 100%; height: auto;}
-        h2 {padding-left: 10px; padding-top: 0; margin-bottom: 0px; font-size: 25px;}
+        h2 {padding-left: 10px; padding-top: 0; margin-bottom: 10px; font-size: 25px;}
         section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
         .p, .a, .e, .l {display: none;}
         aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
@@ -59,17 +59,18 @@
     <header class="top">
         <h1 style="text-align: center;"> Our Gallery </h1>
         <div class="header">
-            <a href="portfolio.html" class="active">Portfolio</a>
-            <div id="navbar">
-                <a href="index.html">Home</a>
-                <a href="#about.html">About</a>
-                <a href="#contact.html">Contact</a>
-                <a href="#services.html">Services</a>
-                <a href="#review.html">Review</a>
-            </div>
             <a href="javascript:void(0);" class="icon" onclick="navFunction()">
                 <i class="fa fa-bars"></i>
             </a>
+            <br/><br/>
+            <div id="navbar">
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="index.html">Home</a>
+                <a href="#about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#services.html">Services</a>
+                <a href="reviews.html">Review</a>
+            </div>
             <script language="javascript">
                 function navFunction() {
                     var links = document.getElementById("navbar");
