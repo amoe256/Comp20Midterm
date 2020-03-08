@@ -8,20 +8,11 @@
     <meta name=Assignment content="Comp20 Midterm">
     <meta name="Description" content="Galleria">
     <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index_style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> Galleria
     </title>
-    <script language="javascript">
-        function navFunction() {
-            var links = document.getElementById("navbar");
-            if (links.style.display == "block") {
-                links.style.display = "none";
-            } else {
-                links.style.display = "block";
-            }
-        }
-    </script>
 </head>
 
 
@@ -29,17 +20,18 @@
     <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
         <div class="header">
-            <a href="index.html" class="active">Home</a>
-            <div id="navbar">
-                <a href="#about.html">About</a>
-                <a href="#contact.html">Contact</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="#services.html">Services</a>
-                <a href="#review.html">Review</a>
-            </div>
             <a href="javascript:void(0);" class="icon" onclick="navFunction()">
                 <i class="fa fa-bars"></i>
             </a>
+            <br/><br/>
+            <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#services.html">Services</a>
+                <a href="reviews.html" class="active">Review</a>
+            </div>
             <script language="javascript">
                 function navFunction() {
                     var links = document.getElementById("navbar");
