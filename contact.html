@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="contact.css"/>
     <title> Contact Us </title>
 </head>
-<body>
+<body style="margin-bottom: 100px;">
     <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
         <div class = "header">
@@ -90,7 +90,7 @@
                     <td><input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px;" type="text" id="phone" placeholder="Enter your phone number"></td>
                 </tr>
                 <tr>
-                    <td><textarea id="questions" style="font-family: 'Contrail One', 'Ariel'; height: 250px;  width: 350px;" name="msg" placeholder="Write a review ..."></textarea></td>
+                    <td><textarea id="questions" style="font-family: 'Contrail One', 'Ariel'; height: 200px;  width: 350px;" name="msg" placeholder="Have a question?"></textarea></td>
                     <br>
                 </tr>
             </table>
@@ -102,34 +102,34 @@
         {
             form = document.forms[0];
             if (form.name.value == "") {
-                form.name.value = "Name is required";
+                alert("Name is required");
                 form.name.select();
                 return false;
             }
             if (form.email.value == "") {
-                form.email.value = "Email is required";
+                alert("Email is required");
                 form.email.select();
                 return false;
             }
             var regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
             if (!regexEmail.test(form.email.value)) {
-                form.email.value = "Invalid email";
+                alert("Invalid email");
                 form.email.select();
                 return false;
             }
             if (form.phone.value == "") {
-                form.phone.value = "Phone is required";
+                alert("Phone is required");
                 form.phone.select();
                 return false;
             }
             var regexPhone = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
             if (!regexPhone.test(form.phone.value)) {
-                form.phone.value = "Invalid number";
+                alert("Invalid number");
                 form.phone.select();
                 return false;
             }
             if (form.question.value == "") {
-                form.question.value = "Question is required";
+                alert("Question is required");
                 form.question.select();
                 return false;
             }
