@@ -31,7 +31,7 @@ h1 {
 .header a.icon {
     position: absolute;
     display: block;
-    right: 0;
+    left: 0;
     top: 0;
 }
 
