@@ -18,7 +18,7 @@
         .row {display: flex; justify-content: space-around;}
         .column {flex: 33.33%; padding: 10px;}
         img {width: 100%; height: auto;}
-        h2 {padding-left: 10px; padding-top: 0; margin-bottom: 10px; font-size: 25px;}
+        h2 {padding-left: 10px; padding-top: 0; margin-bottom: 10px; font-size: 25px; font-family: 'Contrail One', 'Ariel';}
         section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
         .p, .a, .e, .l {display: none;}
         aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
@@ -33,24 +33,33 @@
 
     <script>
         $(document).ready(function() {
-            $("#p").click(function () {
+            $("#p").click(function() {
                 $(".p").slideToggle("slow");
             });
 
-            $("#e").click(function () {
+            $("#e").click(function() {
                 $(".e").slideToggle("slow");
             });
 
-            $("#a").click(function () {
+            $("#a").click(function() {
                 $(".a").slideToggle("slow");
             });
 
-            $("#l").click(function () {
+            $("#l").click(function() {
                 $(".l").slideToggle("slow");
+            });
+
+            $("img").hover(function() {
+                var img_id = $(this).attr('id');
+                var str = img_id.split('_');
+                document.getElementById("artist_name").innerHTML = "Artist is " + "<b>" + str[0] + "</b>";
+                document.getElementById("art_name").innerHTML = "Artwork name is " + "<b>" + str[1] + "</b>";;
+            }, function() {
+                document.getElementById("artist_name").innerHTML = "";
+                document.getElementById("art_name").innerHTML = "";
             });
         })
     </script>
-
 </head>
 
 
@@ -64,10 +73,10 @@
             </a>
             <br/><br/>
             <div id="navbar">
-                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="index.html">Home</a>
                 <a href="#about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="#services.html">Services</a>
                 <a href="reviews.html">Review</a>
             </div>
@@ -93,6 +102,8 @@
 
     <aside>
         <p>Click on the art to learn more</p>
+        <p id="artist_name"></p>
+        <p id="art_name"></p>
     </aside>
 
     <script language="javascript">
@@ -128,7 +139,7 @@
             var str = "";
             while (index < num) {
                 str += "<div class='column'>";
-                str += "<img src='" + array[index].source +"' attribute='" + array[index].atr + "'/>";
+                str += "<img src='" + array[index].source + "' id='" + array[index].artist + '_' + array[index].name + "' attribute='" + array[index].atr + "'/>";
                 str += "</div>";
                 index += 1;
             }
@@ -148,7 +159,7 @@
         <div class="p">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "Mary Flowers", "Color Palet"),
                 new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
                 new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
                 new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
@@ -167,7 +178,7 @@
         <div class="e">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
+                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "Mary Flowers", ""),
                 new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
                 new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
                 new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
