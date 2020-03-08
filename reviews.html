@@ -29,17 +29,18 @@
     <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
         <div class="header">
-            <a href="index.html" class="active">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <br/><br/>
             <div id="navbar">
+                <a href="index.html" class="active">Home</a>
                 <a href="#about.html">About</a>
                 <a href="#contact.html">Contact</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="#services.html">Services</a>
                 <a href="#review.html">Review</a>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
             <script language="javascript">
                 function navFunction() {
                     var links = document.getElementById("navbar");
