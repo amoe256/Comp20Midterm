@@ -14,14 +14,30 @@
     <title> Gallery </title>
 
     <style type="text/css">
-        .row, .column {box-sizing: border-box;}
+        aside, section, .row, .column {box-sizing: border-box;}
         .row {display: flex; justify-content: space-around;}
-        .column {flex: 33.33%; padding: 10px;}
+        .column {flex: 25%; padding: 10px; text-align: center;}
         img {width: 100%; height: auto;}
-        h2 {padding-left: 10px; padding-top: 20px; margin-bottom: 0px;}
-        section {background-color: lightgrey; margin-bottom: 10px; display: block;}
+        h2 {margin: 0; font-size: 25px; font-family: 'Contrail One', 'Ariel';}
+        section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
+        .cer, .cla{display: none;}
+        aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
+        button {background: lightgrey; border: none; padding:5px 0px; margin-left:  20px; vertical-align: middle; text-align: center;}
+        .col_art_name, .col_artist_name {display: none;}
+        @media(max-width: 750px) {
+            aside {display: none;}
+            section {width: 100%;}
+            .col_art_name, .col_artist_name{display: block;}
+        }
     </style>
 
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="portfolio_artPages_effects.js"></script>
 </head>
 
 
@@ -35,10 +51,10 @@
             </a>
             <br/><br/>
             <div id="navbar">
-                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="index.html">Home</a>
                 <a href="#about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="#services.html">Services</a>
                 <a href="reviews.html">Review</a>
             </div>
@@ -60,121 +76,44 @@
             <a href="photographs.html">Photographs</a>
         </div>
     </header>
+    <br/>
 
-    <script language="javascript">
-        function photo(source, atr, artist, name) {
-            this.source = source;
-            this.atr = atr;
-            this.artist = artist;
-            this.name = name;
-        }
+    <aside>
+        <p style="font-size: 20px;">Art Info</p>
+        <p id="artist_name"></p>
+        <p id="art_name"></p>
+    </aside>
 
-        function printRows(picture_array) {
-            var str = "";
-            for (i = 0; i < picture_array.length; i+=4) {
-                str += "<div class='row'>";
-                str += printColumns(i, picture_array);
-                str += "</div>";
-            }
-            return str;
-        }
+    <script src="portfolio_artPages_layout.js"></script>
 
-        function printColumns(index, array) {
-            num = array.length - index;
-            max_index = index + 4;
-
-            // If statement used to determine whether index + 3 will exceed length of the array
-            if ((array.length - index) >= 4) {
-                num = index + 4;
-            }
-            else {
-                num = index + num;
-            }
-
-            var str = "";
-            while (index < num) {
-                str += "<div class='column'>";
-                str += "<img src='" + array[index].source +"' attribute='" + array[index].atr + "'/>";
-                str += "</div>";
-                index += 1;
-            }
-
-            /* Putting in blank columns to make it 4 columns per row (keeps sizing for the columns
-            proportional) */
-            while (index < max_index) {
-                str += "<div class='column'></div>";
-                index +=1;
-            }
-            return str;
-        }
-    </script>
-
-    <section id="people">
-        <h2> People </h2>
+    <section id="ceramic">
+        <button id="cer"><h2>Ceramic</h2></button>
+        <div class="cer">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
-                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+                new photo("portfolio_sculptures/ceramic1.jpg", "Photo by Jessica Rockowitz on Unsplash", "Harry Doyle", ""),
+                new photo("portfolio_sculptures/ceramic2.jpg", "Photo by Liv Bruce on Unsplash", "Harry Doyle", ""),
+                new photo("portfolio_sculptures/ceramic3.jpg", "Photo by Krista Mangulsone on Unsplash", "Harry Doyle", ""),
+                new photo("portfolio_sculptures/ceramic4.jpg", "Photo by Ryan Walton on Unsplash", "Harry Doyle", "Beach Dog")
             )
             document.writeln(printRows(head_array));
         </script>
+        </div>
     </section>
 
-    <section id="events">
-        <h2> Event Photographs </h2>
+    <section id="clay">
+        <button id="cla"><h2>Clay</h2></button>
+        <div class="cla">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
-                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
+                new photo("portfolio_sculptures/clay1.jpg", "Photo by Paul Gilmore on Unsplash", "Mary Flowers", ""),
+                new photo("portfolio_sculptures/clay2.jpg", "Photo by Omer Salom on Unsplash", "Mary Flowers", ""),
+                new photo("portfolio_sculptures/clay3.jpg", "Photo by Sean Pollock on Unsplash", "Mary Flowers", "Skyline"),
+                new photo("portfolio_sculptures/clay4.jpg", "Photo by Laith Abdulkareem on Unsplash", "Mary Flowers", "Rush Hour")
             )
             document.writeln(printRows(head_array));
         </script>
-
-    </section>
-    <section id="abstract">
-        <h2> Abstract Photos </h2>
-        <script language="javascript">
-            head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
-                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
-            )
-            document.writeln(printRows(head_array));
-        </script>
-    </section>
-
-    <section id="landscapes">
-        <h2> Nature / Landscapes </h2>
-        <script language="javascript">
-            head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "", ""),
-                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", ""),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "", "")
-            )
-            document.writeln(printRows(head_array));
-        </script>
+        </div>
     </section>
     <br/>
 
