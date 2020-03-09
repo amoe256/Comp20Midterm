@@ -4,21 +4,12 @@
 .nav2 {text-align: center;}
 .nav2 .active {background-color: lightgrey;}
 
-/*@media(max-width: 1000px) {
-    .nav2 a{margin: 0 10px; font-size: 17px;}
-    .nav2 a:first-child {margin-left: 0;}
-    .nav2 a:last-child {margin-right: 0;}
-    .name, .bio {font-size: 17px;}
-    h1 {font-size: 30px;}
-}*/
-
 @media(max-width: 750px) {
     .nav2 a{margin: 0 10px; font-size: 15px;}
     .nav2 a:first-child {margin-left: 0;}
     .nav2 a:last-child {margin-right: 0;}
     .name, .bio {font-size: 15px;}
     .row {flex-direction: column;}
-    .column {flex: 100%;}
+    .column {flex: 50%;}
     h1 {font-size: 25px;}
-    aside {display: none;}
 }
