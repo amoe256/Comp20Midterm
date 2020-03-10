@@ -1,0 +1,158 @@
+<!--
+
+  Comments: Given some recommendations on the good
+        practices of writing a Javascript file
+        separately, my meth0d--including the sc-
+        ript in the HTML cod--might not be impr-
+        essive. However, since the assignment w-
+        as not as much completed, I thought this
+        method would not be a bad approach.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Amicable</title>
+  <h1 style="font-size: 30 px"> Welcome to Gallery Academy! </h1>
+</head>
+
+<body>
+  <header>
+    <form action="" method="post" name="frmComp"> 
+      <fieldset>  
+        <legend><em>Personal Information</em></legend><br>  
+        <label>First name:   <input type="text" id="txtFName" size="20" placeholder="First Name"></label>
+        <label>Last name:    <input type="text" id="txtLName" size="20" placeholder="Last  Name"></label><br><br>
+        <label>Date of Birth:<input type="date" id="txtDate"  size="20" placeholder="mm/dd/yyyy"></label> 
+        <label>Sex:
+          <select name="sex" id="my_sex">   
+           <option value="None"></option> 
+           <option value="Male">Male</option>    
+           <option value="Female">Female</option>   
+           <option value="PNTD">Prefer not to disclose</option>   
+          </select>
+        </label><br><br>
+        <label>E-mail:       <input type="text" id="txtEmail"  size="20" placeholder="e.g. me@myemail.com"></label>  
+        <label>Phone Number: <input type="text" id="txtNumber" size="20" placeholder="+1-xxx-xxx-xxxx"></label><br><br>
+        <label>Adress:   
+          <input type="text" id="txt1stAdress" size="60" placeholder="Adress Line 1">   <br><br>
+          <input type="text" id="txt2ndAdress" size="60" placeholder="Adress Line 2">   <br><br>
+          <input type="text" id="txtCity"      size="16" placeholder="City">
+          <input type="text" id="txtState"     size="16" placeholder="State">
+          <input type="text" id="txtZIP"       size="16" placeholder="Postal Code/ZIP"> <br><br>
+        </label>
+    </fieldset><br><br>
+      
+    <fieldset>
+      <legend><em>Quick Survey</em></legend>
+       <label>Have you ever done art:
+          <select name="firstQns" id="first">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option>
+           <option value="5">5=XXX</option>   
+          </select>
+        </label><br><br>
+        <label>Have you ever done art:
+          <select name="secondQns" id="second">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option> 
+           <option value="5">5=XXX</option>      
+          </select>
+        </label><br><br>
+        <label>Have you ever done art:
+          <select name="thirdQns" id="third">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option>  
+           <option value="5">5=XXX</option>     
+          </select>
+        </label><br><br>
+        <label>Have you ever done art:
+          <select name="fourthQns" id="fourth">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option>  
+           <option value="5">5=XXX</option>     
+          </select>
+        </label><br><br>
+        <label>Have you ever done art:
+          <select name="fifthQns" id="fifth">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option>  
+           <option value="5">5=XXX</option>     
+          </select>
+        </label><br><br>
+        <label>Have you ever done art:
+          <select name="sixthQns"id="sixth">   
+           <option value="NoneSurvey"></option> 
+           <option value="0">0=Not at all</option>    
+           <option value="1">1=XXX</option>   
+           <option value="2">2=XXX</option> 
+           <option value="3">3=XXX</option> 
+           <option value="4">4=XXX</option>
+           <option value="5">5=XXX</option>       
+          </select>
+        </label><br><br>
+    </fieldset><br><br>
+
+    <fieldset>
+      <legend><em>My Story</em></legend>      
+        <label>
+          In 700 words or less, say why you would like to be part of our school: <br>     
+          <textarea name="txtTiebreaker" rows="10" cols="50" maxlength="3500" id="response"></textarea>      
+        </label>  
+    </fieldset>  
+
+      <br>    
+        <input type="submit" value="Submit Form">  
+      <br>
+
+    </form>
+    <!--The Javascript code for accessing the input values-->
+      <script>
+        var total_cost = 0;
+        var detailsObtained = new Array();
+        var my_form = document.getElementsByName("frmComp")[0];
+        my_form.addEventListener("submit", function()
+        {
+           detailsObtained.push(document.getElementById("txtFName").value);
+           detailsObtained.push(document.getElementById("txtLName").value);
+           detailsObtained.push(document.getElementById("txtDate").value);
+           detailsObtained.push(document.getElementById("my_sex").value);
+           detailsObtained.push(document.getElementById("txtEmail").value);
+           detailsObtained.push(document.getElementById("txtNumber").value);
+           detailsObtained.push(document.getElementById("txt1stAdress").value);
+           detailsObtained.push(document.getElementById("txt2ndAdress").value);
+           detailsObtained.push(document.getElementById("txtCity").value);
+           detailsObtained.push(document.getElementById("txtState").value);
+           detailsObtained.push(document.getElementById("txtZIP").value);
+           detailsObtained.push(document.getElementById("first").value);
+           detailsObtained.push(document.getElementById("second").value);
+           detailsObtained.push(document.getElementById("third").value);
+           detailsObtained.push(document.getElementById("fourth").value);
+           detailsObtained.push(document.getElementById("fifth").value);
+           detailsObtained.push(document.getElementById("sixth").value);
+           detailsObtained.push(document.getElementById("response").value);
+        })
+      </script>
+  </header>
+</body>
+</html>
