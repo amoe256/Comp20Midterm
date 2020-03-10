@@ -45,20 +45,45 @@ h1 {
     color: white;
 }
 
-.aboutLink {
+.link {
     text-decoration: none;
     color: #000;
 }
 
-section.welcome_description {
-    margin-left: 20%;
+#welcome_description {
+    margin-left: 10%;
     width: 500px;
+    margin-bottom: 40px;
 }
 
-#slideshow {
-    position: relative;
-    width: 300px;
-    height: 500px;
+#news {
+    margin-left: 10%;
+    width: 500px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 300px;
+}
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
 }
 
 footer {
