@@ -10,8 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index_style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="review.css">
-    <title>Galleria - Reviews</title>
+    <title> Galleria - Reiviews </title>
+    <style>
+        .center {
+            margin: auto;
+            width: 80%;
+            padding: 5px;
+        }
+    </style>
     <script language="javascript">
         function navFunction() {
             var links = document.getElementById("navbar");
@@ -26,6 +32,9 @@
 
 
 <body>
+
+
+
     <header class="top">
         <h1 style="text-align: center;"> Galleria </h1>
         <div class="header">
@@ -38,7 +47,7 @@
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="purchase.html">Purchase</a>
+                <a href="#purchase.html">Purchase</a>
                 <a href="review.html">Review</a>
             </div>
             <script language="javascript">
@@ -52,23 +61,25 @@
                 }
             </script>
         </div>
+    </header>
+    <div class="center">
         <form name="myform" onsubmit="return validate()">
             <div>
-                <p style="font-size: 18px;"> Reviews: </p>
-                <p style="font-size: 12px; padding-bottom: 15px;">"Ann Der taught me so much about art in such a short period of time! Not only did I learn how to paint, but my appreciation for art has increased significantly!"- Johnny Appleseed</p>
-                <p style="font-size: 12px; padding-bottom: 15px;">"Ryan's artwork belongs in MoMA"- Jane Doe</p>
-                <p style="font-size: 12px; padding-bottom: 15px;">"Gavin helped me sculpt work that I am proud of"- Richard Miles</p>
+                <p style="font-size: 24px;"> Reviews: </p>
+                <p style="font-size: 18px; padding-bottom: 15px;">"Ann Der taught me so much about art in such a short period of time! Not only did I learn how to paint, but my appreciation for art has increased significantly!"- Johnny Appleseed</p>
+                <p style="font-size: 18px; padding-bottom: 15px;">"Brian's artwork belongs in MoMA"- Jane Doe</p>
+                <p style="font-size: 18px; padding-bottom: 15px;">"Harry helped me sculpt work that I am proud of"- Richard Miles</p>
 
             </div>
 
             <div>
-                <p>Write your own: </p>
+                <p style="font-size: 24px;">Write your own: </p>
             </div>
             <div style="padding-bottom: 10px;">
-                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px;" type="text" id="txtName" placeholder="Enter your name" />
+                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtName" placeholder="Enter your name" />
             </div>
             <div style="padding-bottom: 10px;">
-                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px;" type="text" id="txtEmail" placeholder="Enter your email address" />
+                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtEmail" placeholder="Enter your email address" />
             </div>
 
             <div style="padding-bottom: 20px;">
@@ -95,6 +106,7 @@
             </div>
 
         </form>
+    </div>
 </body>
 <script>
     function validate() {
@@ -126,11 +138,12 @@
         return valid
     }
 </script>
-</header>
+
 
 <section id="reviews " style="margin-left:10%; width: 500px; ">
     <h2></h2>
 </section>
+
 <footer>
     <p>©Galleria.Inc 2020 | All Rights Reserved</p>
 </footer>
