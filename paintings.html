@@ -11,25 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index_style.css" />
     <link rel="stylesheet" type="text/css" href="portfolio_style.css" />
+    <link rel="stylesheet" type="text/css" href="sub_portfolio_style.css" />
     <title> Gallery </title>
 
     <style type="text/css">
-        aside, section, .row, .column {box-sizing: border-box;}
-        .row {display: flex; justify-content: space-around;}
-        .column {flex: 25%; padding: 10px; text-align: center;}
-        img {width: 100%; height: auto;}
-        h2 {margin: 0; font-size: 25px; font-family: 'Contrail One', 'Ariel';}
-        section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
         .p, .a, .sti, .l{display: none;}
-        aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
-        button {background: lightgrey; border: none; padding:5px 0px; margin-left:  20px; vertical-align: middle; text-align: center;}
-        .col_art_name, .col_artist_name {display: none;}
-        
-        @media(max-width: 750px) {
-            aside {display: none;}
-            section {width: 100%;}
-            .col_art_name, .col_artist_name{display: block;}
-        }
     </style>
 
     <script
@@ -53,7 +39,7 @@
             <br/><br/>
             <div id="navbar">
                 <a href="index.html">Home</a>
-                <a href="#about.html">About</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="#purchase.html">Purchase</a>
@@ -92,14 +78,10 @@
         <div class="p">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/person1.jpg", "Photo by Luis Villasmil on Unsplash", "Mary Flowers", "Color Palet"),
-                new photo("portfolio_photographs/person2.jpg", "Photo by Lucas Sankey on Unsplash", "Harry Doyle", "Unknown"),
-                new photo("portfolio_photographs/person8.jpg", "Photo by Carlos Augusto on Unsplash", "Mary Flowers", "Nostalgic Green"),
-                new photo("portfolio_photographs/person3.jpg", "Photo by Daniel Lincoln on Unsplash", "Harry Doyle", "Unknown"),
-                new photo("portfolio_photographs/person4.jpg", "Photo by Christopher Campbell on Unsplash", "Harry Doyle", "Unknown"),
-                new photo("portfolio_photographs/person5.jpg", "Photo by Ethan Hoover on Unsplash", "Mary Flowers", "Smiling"),
-                new photo("portfolio_photographs/person6.jpg", "Photo by mohammad khaksarmadani on Unsplash", "Anna Granger", "Mystery"),
-                new photo("portfolio_photographs/person7.jpg", "Photo by Lethu Zimu on Unsplash", "Anna Granger", "Freckled Warmth")
+                new photo("portfolio_paintings/person1.jpg", "Photo by Alexander Hipp on Unsplash", "", ""),
+                new photo("portfolio_paintings/person2.jpg", "Photo by adrianna geo on Unsplash", "", ""),
+                new photo("portfolio_paintings/person3.jpg", "Photo by Carlos Augusto on Unsplash", "", ""),
+                new photo("portfolio_paintings/person4.jpg", "Photo by Birmingham Museums Trust on Unsplash", "", "")
             )
             document.writeln(printRows(head_array));
         </script>
@@ -111,10 +93,10 @@
         <div class="a">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/abstract1.jpg", "Photo by Efe Kurnaz on Unsplash", "Anna Granger", "Colorful Door"),
-                new photo("portfolio_photographs/abstract2.jpg", "Photo by Taneli Lahtinen on Unsplash", "Anna Granger", "Lone Driver"),
-                new photo("portfolio_photographs/abstract3.jpg", "Photo by Deva Darshan on Unsplash", "Anna Granger", "Red Umbrella"),
-                new photo("portfolio_photographs/abstract4.jpg", "Photo by Guillaume Bleyer on Unsplash", "Anna Granger", "Different Perspective")
+                new photo("portfolio_paintings/abstract1.jpg", "Photo by Alan Scales on Unsplash", "", ""),
+                new photo("portfolio_paintings/abstract2.jpg", "Photo by Henrik Dønnestad on Unsplash", "", ""),
+                new photo("portfolio_paintings/abstract3.jpg", "Photo by Steve Johnson on Unsplash", "", ""),
+                new photo("portfolio_paintings/abstract4.jpg", "Photo by Geordanna Cordero on Unsplash", "", "")
             )
             document.writeln(printRows(head_array));
         </script>
@@ -126,10 +108,10 @@
         <div class="sti">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/family1.jpg", "Photo by Jessica Rockowitz on Unsplash", "Harry Doyle", ""),
-                new photo("portfolio_photographs/family2.jpg", "Photo by Liv Bruce on Unsplash", "Harry Doyle", ""),
-                new photo("portfolio_photographs/family3.jpg", "Photo by Krista Mangulsone on Unsplash", "Harry Doyle", ""),
-                new photo("portfolio_photographs/family4.jpg", "Photo by Ryan Walton on Unsplash", "Harry Doyle", "Beach Dog")
+                new photo("portfolio_paintings/still1.jpg", "Europeana on Unsplash", "", ""),
+                new photo("portfolio_paintings/still2.jpg", "Photo by Birmingham Museums Trust on Unsplash", "", ""),
+                new photo("portfolio_paintings/still3.jpg", "Europeana on Unsplash", "", ""),
+                new photo("portfolio_paintings/still4.jpg", "Photo by Ryan Walton on Unsplash", "", "")
             )
             document.writeln(printRows(head_array));
         </script>
@@ -141,10 +123,10 @@
         <div class="l">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_photographs/nature1.jpg", "Photo by Paul Gilmore on Unsplash", "Mary Flowers", ""),
-                new photo("portfolio_photographs/nature2.jpg", "Photo by Omer Salom on Unsplash", "Mary Flowers", ""),
-                new photo("portfolio_photographs/nature4.jpg", "Photo by Sean Pollock on Unsplash", "Mary Flowers", "Skyline"),
-                new photo("portfolio_photographs/nature3.jpg", "Photo by Laith Abdulkareem on Unsplash", "Mary Flowers", "Rush Hour")
+                new photo("portfolio_paintings/nature1.jpg", "Photo by Tamara Menzi on Unsplash", "", ""),
+                new photo("portfolio_paintings/nature2.jpg", "Photo by Birmingham Museums Trust on Unsplash", "", ""),
+                new photo("portfolio_paintings/nature3.jpg", "Photo by Birmingham Museums Trust on Unsplash", "", ""),
+                new photo("portfolio_paintings/nature4.jpg", "Photo by Laith Abdulkareem on Unsplash", "", "")
             )
             document.writeln(printRows(head_array));
         </script>
