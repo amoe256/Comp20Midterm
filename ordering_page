@@ -1,0 +1,311 @@
+<!-- 
+  Comments: For the product part, we can have a loop--I guees--and 
+            a structure that will be having product details and then
+            loop it using javascript code.
+          -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      max-height: 50px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      height: 75%;
+      font-size: 18px;
+    }
+
+    .card button:hover {
+      opacity: 0.7;
+    }
+
+    .column {
+      float: left;
+      width: 30.00%;
+      padding: 10px;
+      height: 300px; 
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /*This is for the grid container*/
+
+    .grid-container {
+      display: grid;
+      grid-row-gap: 200px;
+      grid-column-gap: 10px;
+      padding: 50px;
+
+    /* This is for the columns*/
+    .my_column {
+      float: left;
+      padding: 10px;
+      height: 250px; 
+    }
+
+    .left, .right {
+      width: 25%;
+    }
+
+    .middle {
+      width: 50%;
+    }
+
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    }
+    body {
+      font-family: Arial;
+      font-size: 17px;
+      padding: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: -ms-flexbox; 
+      display: flex;
+      -ms-flex-wrap: wrap; 
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+
+    .col-25 {
+      -ms-flex: 25%; 
+      flex: 25%;
+    }
+
+    .col-50 {
+      -ms-flex: 50%; 
+      flex: 50%;
+    }
+
+    .col-75 {
+      -ms-flex: 75%; 
+      flex: 75%;
+    }
+
+    .col-25,
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: #f2f2f2;
+      padding: 5px 20px 15px 20px;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .icon-container {
+      margin-bottom: 20px;
+      padding: 7px 0;
+      font-size: 24px;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #2196F3;
+    }
+
+    hr {
+      border: 1px solid lightgrey;
+    }
+
+    span.price {
+      float: right;
+      color: grey;
+    }
+
+
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+      .col-25 {
+        margin-bottom: 20px;
+      }
+    }
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Galleria's Responsive Checkout Form</h2>
+<p style="text-align: center;">We believe in quality for cheap. Yes, even less than $10!</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <div class="grid-container">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX.</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX.</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX.</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX.</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="column">
+       <div class="card">
+        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Name of the artist: XXX.</p>
+       <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="#">Picture 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Picture 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Picture 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Picture 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      <input type="submit" value="Checkout" class="btn">
+      <!-- 
+        Comment:
+          You can put a link to the payment details page.
+        -->
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
