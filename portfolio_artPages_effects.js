@@ -29,6 +29,10 @@ $(document).ready(function() {
         $(".cla").slideToggle("slow");
     });
 
+    $("#scu").click(function() {
+        $(".scu").slideToggle("slow");
+    });
+
     // Toggle for the paintings
     $("#sti").click(function() {
         $(".sti").slideToggle("slow");
