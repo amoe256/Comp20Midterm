@@ -8,6 +8,10 @@ h1 {
     margin: auto;
 }
 
+h2 {
+    margin: 0px;
+}
+
 .header {
     margin: auto;
     overflow: hidden;
@@ -45,20 +49,51 @@ h1 {
     color: white;
 }
 
-.aboutLink {
+a {
+    color: steelblue;
     text-decoration: none;
-    color: #000;
 }
 
-section.welcome_description {
-    margin-left: 20%;
+#welcome_description {
+    margin-left: 7.5%;
     width: 500px;
+    margin-bottom: 40px;
 }
 
-#slideshow {
-    position: relative;
-    width: 300px;
-    height: 500px;
+#news {
+    margin-left: 7.5%;
+    width: 500px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+#slider {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    float: right;
+    margin-right: 7.5%;
+    margin-top: -150px;
+}
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 500px;
+    height: auto;
+}
+
+#slider .slide img {
+    width: 500px;
+    height: 400px;
 }
 
 footer {
