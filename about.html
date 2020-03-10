@@ -42,9 +42,90 @@
     </header>
     <section id="about_description">
         <h2>Who are we?</h2><br /> 
-        <p>Galleria is a modern arts center that makes all art forms accessible and enjoyable to everyone. We have incredibly talented in-house artists that feature their own work in monthly exhibitions. We also offer classes for all skill levels and encourage anyone and everyone to join! And if you're already a hobbyist, take a look at our supply store; we have everything you could possibly want!</p>
-        <a href="contact.html " id="link" style="font-size: 20px;">I want to get involved!</a>
+        <p>Galleria is a modern arts center that makes all art forms accessible and enjoyable to everyone. We have incredibly talented 
+        <a href="portfolio.html">in-house artists</a> that feature their own work in monthly exhibitions. We also offer classes for all skill levels and encourage anyone and everyone to join! And if you're already a hobbyist, take a look at our supply store; we have everything you could possibly want!
+        <a href="contact.html " id="link" style="font-size: 20px;">I want to get involved!</a></p>
     </section>
+    <div id="columns">
+            <div id="slider1">
+            <ul class="slides">
+                <li class="slide"><img src="./portfolio_artists/Alex.jpg"></li>
+                <li class="slide"><img src="./portfolio_photographs/abstract1.jpg"></li>
+                <li class="slide"><img src="./portfolio_sculptures/clay1.jpg"></li>
+                <li class="slide"><img src="./portfolio_artists/Alex.jpg"></li>
+            </ul>
+        </div>
+        <div id="slider2">
+            <ul class="slides">
+                <li class="slide"><img src="./portfolio_artists/Anna.jpg"></li>
+                <li class="slide"><img src="./portfolio_photographs/abstract2.jpg"></li>
+                <li class="slide"><img src="./portfolio_sculptures/clay2.jpg"></li>
+                <li class="slide"><img src="./portfolio_artists/Anna.jpg.jpg"></li>
+            </ul>
+        </div>
+        <div id="slider3">
+            <ul class="slides">
+                <li class="slide"><img src="./portfolio_artists/Anne.jpg"></li>
+                <li class="slide"><img src="./portfolio_photographs/abstract3.jpg"></li>
+                <li class="slide"><img src="./portfolio_sculptures/clay3.jpg"></li>
+                <li class="slide"><img src="./portfolio_artists/Anne.jpg"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var width = 200;
+        var animationSpeed = 1750;
+        var pause = 4250;
+
+        var currSlide1 = 1;
+        var $slider1 = $('#slider1');
+        var $slideContainer1 = $slider1.find('.slides');
+        var $slides1 = $slideContainer1.find('.slide');
+        $(function() {
+            setInterval(function() {
+                $slideContainer1.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                    currSlide1++;
+                    if (currSlide1 == $slides1.length) {
+                        currSlide1 = 1;
+                        $slideContainer1.css('margin-left', 0);
+                    }
+                });
+            }, pause);
+        });
+
+        var currSlide2 = 1;
+        var $slider2 = $('#slider2');
+        var $slideContainer2 = $slider2.find('.slides');
+        var $slides2 = $slideContainer2.find('.slide');
+        $(function() {
+            setInterval(function() {
+                $slideContainer2.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                    currSlide2++;
+                    if (currSlide2 == $slides2.length) {
+                        currSlide2 = 1;
+                        $slideContainer2.css('margin-left', 0);
+                    }
+                });
+            }, pause);
+        });
+
+        var currSlide3 = 1;
+        var $slider3 = $('#slider3');
+        var $slideContainer3 = $slider3.find('.slides');
+        var $slides3 = $slideContainer3.find('.slide');
+        $(function() {
+            setInterval(function() {
+                $slideContainer3.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                    currSlide3++;
+                    if (currSlide3 == $slides3.length) {
+                        currSlide3 = 1;
+                        $slideContainer3.css('margin-left', 0);
+                    }
+                });
+            }, pause);
+        });
+    </script>
     <footer>
         <p>©Galleria.Inc 2020 | All Rights Reserved</p>
     </footer>
