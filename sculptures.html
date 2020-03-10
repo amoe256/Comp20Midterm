@@ -20,7 +20,7 @@
         img {width: 100%; height: auto;}
         h2 {margin: 0; font-size: 25px; font-family: 'Contrail One', 'Ariel';}
         section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
-        .cer, .cla{display: none;}
+        .cer, .cla, .scu {display: none;}
         aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
         button {background: lightgrey; border: none; padding:5px 0px; margin-left:  20px; vertical-align: middle; text-align: center;}
         .col_art_name, .col_artist_name {display: none;}
@@ -55,7 +55,7 @@
                 <a href="#about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <a href="portfolio.html" class="active">Portfolio</a>
-                <a href="#services.html">Services</a>
+                <a href="#purchase.html">Purchase</a>
                 <a href="reviews.html">Review</a>
             </div>
             <script language="javascript">
@@ -91,10 +91,10 @@
         <div class="cer">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_sculptures/ceramic1.jpg", "Photo by Lidye on Unsplash", "", ""),
-                new photo("portfolio_sculptures/ceramic2.jpg", "Photo by Aliis Sinisalu on Unsplash", "", ""),
-                new photo("portfolio_sculptures/ceramic3.jpg", "Photo by Linh Pham on Unsplash", "", ""),
-                new photo("portfolio_sculptures/ceramic4.jpg", "Photo by freestocks on Unsplash", "", "")
+                new photo("portfolio_sculptures/ceramic1.jpg", "Photo by Lidye on Unsplash", "Alex Downey", "Black and White Plate"),
+                new photo("portfolio_sculptures/ceramic2.jpg", "Photo by Aliis Sinisalu on Unsplash", "Alex Downey", "Mug"),
+                new photo("portfolio_sculptures/ceramic3.jpg", "Photo by Linh Pham on Unsplash", "Alex Downey", "Array of Products"),
+                new photo("portfolio_sculptures/ceramic4.jpg", "Photo by freestocks on Unsplash", "Alex Downey", "Flower Vase")
             )
             document.writeln(printRows(head_array));
         </script>
@@ -106,12 +106,27 @@
         <div class="cla">
         <script language="javascript">
             head_array = new Array (
-                new photo("portfolio_sculptures/clay1.jpg", "Photo by Oshin Khandelwal on Unsplash", "", ""),
-                new photo("portfolio_sculptures/clay2.jpg", "Photo by Oshin Khandelwal on Unsplash", "", ""),
-                new photo("portfolio_sculptures/clay3.jpg", "Photo by Norris Packer on Unsplash", "", ""),
-                new photo("portfolio_sculptures/clay6.jpg", "Photo by Yuri Bodrikhin on Unsplash", "", ""),
-                new photo("portfolio_sculptures/clay5.jpg", "Photo by Jakob Braun on Unsplash", "", ""),
-                new photo("portfolio_sculptures/clay4.jpg", "Photo by Markus Winkler on Unsplash", "", "")
+                new photo("portfolio_sculptures/clay1.jpg", "Photo by Oshin Khandelwal on Unsplash", "Lucy Herzberg", "Clay Vases"),
+                new photo("portfolio_sculptures/clay2.jpg", "Photo by Oshin Khandelwal on Unsplash", "Lucy Hertzberg", "Many Clay Vases"),
+                new photo("portfolio_sculptures/clay3.jpg", "Photo by Norris Packer on Unsplash", "Lucy Hertzberg", "Neutral Bowls"),
+                new photo("portfolio_sculptures/clay6.jpg", "Photo by Yuri Bodrikhin on Unsplash", "Lucy Hertzberg", "Brown Pot"),
+                new photo("portfolio_sculptures/clay5.jpg", "Photo by Jakob Braun on Unsplash", "Lucy Hertzberg", "Plant Pot"),
+                new photo("portfolio_sculptures/clay4.jpg", "Photo by Markus Winkler on Unsplash", "Lucy Hertzberg", "Statue")
+            )
+            document.writeln(printRows(head_array));
+        </script>
+        </div>
+    </section>
+
+    <section id="sculpture">
+        <button id="scu"><h2>Sculptures</h2></button>
+        <div class="scu">
+        <script language="javascript">
+            head_array = new Array (
+                new photo("portfolio_sculptures/sculpture1.jpg", "Photo by Mika on Unsplash", "Jack Thorn", "Greek Woman"),
+                new photo("portfolio_sculptures/sculpture2.jpg", "Photo by Reno Laithienne on Unsplash", "Jack Thorn", "Personal Bust"),
+                new photo("portfolio_sculptures/sculpture3.jpg", "Photo by Lena Varzar on Unsplash", "Jack Thorn", "Greek Warrior"),
+                new photo("portfolio_sculptures/sculpture4.jpg", "Photo by Nick van den Berg on Unsplash", "Jack Thorn", "Woman and Child")
             )
             document.writeln(printRows(head_array));
         </script>
