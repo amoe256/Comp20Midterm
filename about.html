@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="Author" content="Andreas">
+    <meta name="Date" content="3/3/2020">
+    <meta name=Assignment content="Comp20 Midterm">
+    <meta name="Description" content="Contact Us">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <link rel="stylesheet" type="text/css" href="about.css"/>
+    <title>Galleria - About</title>
+</head>
+<body>
+    <header class="top">
+        <h1 style="text-align: center;"> Galleria </h1>
+        <div class = "header">
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <br/><br/>
+            <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#services.html">Services</a>
+                <a href="reviews.html">Review</a>
+            </div>
+            <script language="javascript">
+                function navFunction() {
+                    var links = document.getElementById("navbar");
+                    if (links.style.display == "block") {
+                        links.style.display = "none";
+                    } else {
+                        links.style.display = "block";
+                    }
+                }
+            </script>
+        </div>
+    </header>
+    <section id="about_description">
+        <h2>Who are we?</h2><br /> 
+        <p>Galleria is a modern arts center that makes all art forms accessible and enjoyable to everyone. We have incredibly talented in-house artists that feature their own work in monthly exhibitions. We also offer classes for all skill levels and encourage anyone and everyone to join! And if you're already a hobbyist, take a look at our supply store; we have everything you could possibly want!</p>
+        <a href="contact.html " id="link" style="font-size: 20px;">I want to get involved!</a>
+    </section>
+    <footer>
+        <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+    </footer>
+</body>
