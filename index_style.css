@@ -8,6 +8,10 @@ h1 {
     margin: auto;
 }
 
+h2 {
+    margin: 0px;
+}
+
 .header {
     margin: auto;
     overflow: hidden;
@@ -45,30 +49,31 @@ h1 {
     color: white;
 }
 
-.link {
+a {
+    color: steelblue;
     text-decoration: none;
-    color: #000;
 }
 
 #welcome_description {
-    margin-left: 10%;
+    margin-left: 7.5%;
     width: 500px;
     margin-bottom: 40px;
 }
 
 #news {
-    margin-left: 10%;
+    margin-left: 7.5%;
     width: 500px;
     margin-bottom: 40px;
     display: inline-block;
 }
 
 #slider {
-    width: 720px;
+    width: 500px;
     height: 400px;
     overflow: hidden;
-    display: inline-block;
-    margin-left: 300px;
+    float: right;
+    margin-right: 7.5%;
+    margin-top: -150px;
 }
 
 #slider .slides {
@@ -82,7 +87,12 @@ h1 {
 #slider .slide {
     float: left;
     list-style-type: none;
-    width: 720px;
+    width: 500px;
+    height: auto;
+}
+
+#slider .slide img {
+    width: 500px;
     height: 400px;
 }
 
