@@ -2,10 +2,10 @@ aside{box-sizing: border-box;}
 .row {display: flex; justify-content: space-around;}
 .column {flex: 25%; padding: 10px; text-align: center;}
 h2 {margin: 0; font-size: 25px; font-family: 'Contrail One', 'Ariel';}
-section {background-color: lightgrey; margin-bottom: 10px; display: block; width: 80%;}
+section {background-color: #EEEEEE; margin-bottom: 10px; display: block; width: 80%;}
 
 aside {display: inline-block; width: 20%; height: 100%; position: fixed; right: 0; background-color: white; color: black; text-align: center; padding: 5px;}
-button {background: lightgrey; border: none; padding:5px 0px; margin-left:  20px; vertical-align: middle; text-align: center;}
+button {background: #EEEEEE; border: none; padding:5px 0px; margin-left:  20px; vertical-align: middle; text-align: center;}
 .col_art_name, .col_artist_name {display: none;}
 @media(max-width: 750px) {
   	aside {display: none;}

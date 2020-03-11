@@ -105,3 +105,46 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+@media (max-width: 1150px) {
+    #welcome_description {
+        width: 280px;
+        margin: auto;
+        display: block;
+    }
+
+    #news {
+        width: 280px;
+        margin: auto;
+        display: block;
+    }
+
+    #slider {
+        width: 280px;
+        height: 280px;
+        overflow: hidden;
+        display: block;
+        margin: auto;
+        float: none;
+        margin-bottom: 20px;
+    }
+    
+    #slider .slides {
+        display: block;
+        width: 6000px;
+        height: 280px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #slider .slide {
+        list-style-type: none;
+        width: 280px;
+        height: auto;
+    }
+    
+    #slider .slide img {
+        width: 280px;
+        height: 280px;
+    }
+}

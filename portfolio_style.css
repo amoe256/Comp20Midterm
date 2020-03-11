@@ -2,12 +2,12 @@
 .nav2 a:first-child {margin-left: 0;}
 .nav2 a:last-child {margin-right: 0;}
 .nav2 {text-align: center;}
-.nav2 .active {background-color: lightgrey;}
+.nav2 .active {background-color: #EEEEEE;}
 
 section, .row, .column {box-sizing: border-box;}
 img {width: 100%; height: auto;}
 
-@media(max-width: 750px) {
+@media(max-width: 600px) {
     .nav2 a{margin: 0 10px; font-size: 15px;}
     .nav2 a:first-child {margin-left: 0;}
     .nav2 a:last-child {margin-right: 0;}
