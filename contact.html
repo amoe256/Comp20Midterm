@@ -26,7 +26,6 @@
                 <a href="about.html">About</a>
                 <a href="contact.html" class="active">Contact</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="ordering_page.html">Purchase</a>
                 <a href="reviews.html">Review</a>
             </div>
             <script language="javascript">
@@ -102,34 +101,34 @@
         {
             form = document.forms[0];
             if (form.name.value == "") {
-                alert("Name is required");
+                alert("Please enter your name");
                 form.name.select();
                 return false;
             }
             if (form.email.value == "") {
-                alert("Email is required");
+                alert("Please enter your email");
                 form.email.select();
                 return false;
             }
             var regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
             if (!regexEmail.test(form.email.value)) {
-                alert("Invalid email");
+                alert("Please enter a valid email");
                 form.email.select();
                 return false;
             }
             if (form.phone.value == "") {
-                alert("Phone is required");
+                alert("Please enter your phone number");
                 form.phone.select();
                 return false;
             }
             var regexPhone = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
             if (!regexPhone.test(form.phone.value)) {
-                alert("Invalid number");
+                alert("Please enter a valid phone number");
                 form.phone.select();
                 return false;
             }
             if (form.question.value == "") {
-                alert("Question is required");
+                alert("Please leave a question or comment");
                 form.question.select();
                 return false;
             }
