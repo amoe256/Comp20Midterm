@@ -14,155 +14,148 @@
     <meta name="Date" content="3/1/2020">
     <meta name=Assignment content="Comp20 Midterm">
     <meta name="Description" content="Galleria">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="ordering_page_style.css" />
     <link rel="stylesheet" type="text/css" href="index_style.css" />
+    <title>Galleria - Order</title>
 </head>
-
 <body>
-
-<header class="top">
-        <h1 style="text-align: center;"> Galleria </h1>
-        <div class = "header">
-            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <br/><br/>
-            <div id="navbar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="ordering_page.html" class="active">Purchase</a>
-                <a href="reviews.html">Review</a>
-            </div>
-            <script language="javascript">
-                function navFunction() {
-                    var links = document.getElementById("navbar");
-                    if (links.style.display == "block") {
-                        links.style.display = "none";
-                    } else {
-                        links.style.display = "block";
-                    }
-                }
-            </script>
+  <header class="top">
+    <h1 style="text-align: center;">Galleria</h1>
+    <div class = "header">
+        <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <br/><br/>
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="ordering_page.html" class="active">Purchase</a>
+            <a href="reviews.html">Review</a>
         </div>
+        <script language="javascript">
+            function navFunction() {
+                var links = document.getElementById("navbar");
+                if (links.style.display == "block") {
+                    links.style.display = "none";
+                } else {
+                    links.style.display = "block";
+                }
+            }
+        </script>
+    </div>
     </header>
 
-<h2 style="text-align: center;">Galleria's Responsive Checkout Form</h2>
-<p style="text-align: center;">We believe in quality for cheap. Yes, even less than $10!</p>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <div class="grid-container">
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX</p>
-       <p><button>Add to Cart</button></p>
-      </div>
+    <h2 style="text-align: center;">Checkout Form</h2>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+            <div class="grid-container">
+    <div class="row">
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_photographs/nature1.jpg" style="width:100%">
+            <h1>Road Trip</h1>
+            <p class="price">$19.99</p>
+            <p>Brian Flowers</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_photographs/nature2.jpg" style="width:100%">
+            <h1>Utah</h1>
+            <p class="price">$19.99</p>
+            <p>Donna Clerk</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_photographs/nature3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Empire Streets</h1>
+            <p class="price">$19.99</p>
+            <p>Ann Der</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
     </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX</p>
-       <p><button>Add to Cart</button></p>
-      </div>
+    <div class="row">
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_paintings/abstract1.jpg" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Fall Forest</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_paintings/abstract2.jpg" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Tide</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="./portfolio_paintings/abstract3.jpg" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Oil Spill</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
     </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX.</p>
-       <p><button>Add to Cart</button></p>
-      </div>
+    <div class="row">
+        <div class="column">
+        <div class="card">
+            <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Name of the artist: XXX</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Name of the artist: XXX.</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
+            <p class="price">$19.99</p>
+            <p>Name of the artist: XXX.</p>
+        <p><button>Add to Cart</button></p>
+        </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX.</p>
-       <p><button>Add to Cart</button></p>
-      </div>
     </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX</p>
-       <p><button>Add to Cart</button></p>
-      </div>
+        </div>
     </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX.</p>
-       <p><button>Add to Cart</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX</p>
-       <p><button>Add to Cart</button></p>
-      </div>
-    </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX.</p>
-       <p><button>Add to Cart</button></p>
-      </div>
-    </div>
-    <div class="column">
-       <div class="card">
-        <img src="fruits-and-vegetables.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Name of the artist: XXX.</p>
-       <p><button>Add to Cart</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Picture 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Picture 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Picture 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Picture 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-      <input type="submit" value="Checkout" class="btn">
-      <!-- 
-        Comment:
-          You can put a link to the payment details page.
-        -->
+    <div class="col-25">
+        <div class="container">
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+        <p><a href="#">Picture 1</a> <span class="price">$15</span></p>
+        <p><a href="#">Picture 2</a> <span class="price">$5</span></p>
+        <p><a href="#">Picture 3</a> <span class="price">$8</span></p>
+        <p><a href="#">Picture 4</a> <span class="price">$2</span></p>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+        <input type="submit" value="Checkout" class="btn">
+        <!-- 
+            Comment:
+            You can put a link to the payment details page.
+            -->
 
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
 </body>
 </html>
