@@ -17,6 +17,19 @@
             width: 80%;
             padding: 5px;
         }
+        
+        @media (max-width: 600px) {
+            .center {
+                margin: auto;
+                width: 280px;
+                display: block;
+            }
+            .message {
+                margin: auto;
+                width: 280px;
+                display: block;
+            }
+        }
     </style>
     <script language="javascript">
         function navFunction() {
@@ -63,49 +76,52 @@
         </div>
     </header>
     <div class="center">
-        <form name="myform" onsubmit="return validate()">
-            <div>
-                <p style="font-size: 24px;"> Reviews: </p>
-                <p style="font-size: 18px; padding-bottom: 15px;">"Ann Der taught me so much about art in such a short period of time! Not only did I learn how to paint, but my appreciation for art has increased significantly!"- Johnny Appleseed</p>
-                <p style="font-size: 18px; padding-bottom: 15px;">"Brian's artwork belongs in MoMA"- Jane Doe</p>
-                <p style="font-size: 18px; padding-bottom: 15px;">"Harry helped me sculpt work that I am proud of"- Richard Miles</p>
+        <div>
+            <p style="font-size: 24px;"> Reviews: </p>
+            <p style="font-size: 18px; padding-bottom: 15px;">"Ann Der taught me so much about art in such a short period of time! Not only did I learn how to paint, but my appreciation for art has increased significantly!"- Johnny Appleseed</p>
+            <p style="font-size: 18px; padding-bottom: 15px;">"Brian's artwork belongs in MoMA"- Jane Doe</p>
+            <p style="font-size: 18px; padding-bottom: 15px;">"Alex helped me sculpt work that I am proud of"- Richard Miles</p>
 
-            </div>
+        </div>
+        <div id="form">
+            <form name="myform" onsubmit="return validate()">
 
-            <div>
-                <p style="font-size: 24px;">Write your own: </p>
-            </div>
-            <div style="padding-bottom: 10px;">
-                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtName" placeholder="Enter your name" />
-            </div>
-            <div style="padding-bottom: 10px;">
-                <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtEmail" placeholder="Enter your email address" />
-            </div>
+                <div>
+                    <p style="font-size: 24px;">Write your own: </p>
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtName" placeholder="Enter your name" />
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <input style="font-family: 'Contrail One', 'Ariel'; padding-bottom: 5px;  width: 240px; font-size: 12px;" type="text" id="txtEmail" placeholder="Enter your email address" />
+                </div>
 
-            <div style="padding-bottom: 20px;">
-                <select id="selArtist">
-                <option selected value="">-- Choose the artist --</option>
-                <option value="Alex Downey">Alex Downey</option>
-                <option value="Donna Clerk">Donna Clerk</option>
-                <option value="Brian Flowers">Brian Flowers</option>
-                <option value="Ann Der">Ann Der</option>
-                <option value="Lucy Hertzberg">Lucy Hertzberg</option>
-                <option value="Harry Doyle">Harry Doyle</option>
-                <option value="Anna Granger">Anna Granger</option>
-                <option value="Jack Thorn">Jack Thorn</option>
-                <option value="Mary Flowers">Mary Flowers</option>
+                <div style="padding-bottom: 20px;">
+                    <select id="selArtist">
+                    <option selected value="">-- Choose the artist --</option>
+                    <option value="Alex Downey">Alex Downey</option>
+                    <option value="Donna Clerk">Donna Clerk</option>
+                    <option value="Brian Flowers">Brian Flowers</option>
+                    <option value="Ann Der">Ann Der</option>
+                    <option value="Lucy Hertzberg">Lucy Hertzberg</option>
+                    <option value="Harry Doyle">Harry Doyle</option>
+                    <option value="Anna Granger">Anna Granger</option>
+                    <option value="Jack Thorn">Jack Thorn</option>
+                    <option value="Mary Flowers">Mary Flowers</option>
+                    
+                    
+                </select>
+                </div>
+                <div class="message" style="padding-bottom: 0px;">
+                    <textarea id="msg" style="font-family: 'Contrail One', 'Ariel'; height: 250px;  width: 350px;" name="msg" placeholder="Write a review ..."></textarea>
+                </div>
+                <div style="padding-bottom: 20px;">
+                    <input type="submit" value="Submit" />
 
-
-            </select>
-            </div>
-            <div style="padding-bottom: 20px;">
-                <textarea id="msg" style="font-family: 'Contrail One', 'Ariel'; height: 250px;  width: 350px;" name="msg" placeholder="Write a review ..."></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Submit" />
-            </div>
-
-        </form>
+                </div>
+                <br>
+            </form>
+        </div>
     </div>
 </body>
 <script>

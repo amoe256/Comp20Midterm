@@ -106,7 +106,7 @@ footer {
     bottom: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     #welcome_description {
         width: 280px;
         margin: auto;
@@ -123,8 +123,10 @@ footer {
         width: 280px;
         height: 280px;
         overflow: hidden;
-        float: right;
-        margin-right: 7.5%;
+        display: block;
+        margin: auto;
+        float: none;
+        margin-bottom: 20px;
     }
     
     #slider .slides {
@@ -136,7 +138,6 @@ footer {
     }
     
     #slider .slide {
-        float: left;
         list-style-type: none;
         width: 280px;
         height: auto;
