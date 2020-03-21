@@ -1,12 +1,12 @@
-<!-- 
-  Comments: For the product part, we can have a loop--I guees--and 
-            a structure that will be having product details and then
-            loop it using javascript code.
-          -->
-
+<!-- Originally created by: Seigfred Madeghe;
+     Create on: 3/09/2020
+     Modified by: Katya Thorup;
+     Date modified: 3/17/2020;
+-->
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -19,7 +19,65 @@
     <link rel="stylesheet" type="text/css" href="ordering_page_style.css" />
     <link rel="stylesheet" type="text/css" href="index_style.css" />
     <title>Galleria - Order</title>
+    
+    <style type="text/css">
+        h1 {
+            font-size: 25px;
+            font-family: 'Contrail One', 'Ariel';
+        }
+
+        @media(max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media(max-width: 450px) {
+            h1 {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+    <!-- Javascript for placing items in cart -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Function to adjust items in the cart
+            $(".button").click(function() {
+                var item_selected = parseInt(this.id);
+
+                // Edit purchase cost
+                var item_cost = parseInt(art_array[item_selected].cost);
+                var curr_cost = $(".total").html();
+                curr_cost = parseInt(curr_cost.substring(1));
+                var final_cost = curr_cost + item_cost;
+                $(".total").html("$" + final_cost);
+
+                // Edited number of items being purchased
+                var num_art = parseInt($(".num_items").html());
+                num_art = num_art + 1;
+                $(".num_items").html(num_art);
+
+                // Editing the purchased items
+                var curr_purchases = $("#purchased_item").html();
+                str = "<p style='color:grey'>" + art_array[item_selected].name + "<span class='price'>$";
+                str += item_cost + " " + "<i class='fa fa-trash' style='color:red'></i></span></p>";
+                $("#purchased_item").html(curr_purchases + str);
+             });
+
+            $("").click(function() {
+                alert(this.id);
+            });
+        })
+    </script>
+
 </head>
+
 <body>
   <header class="top">
     <h1 style="text-align: center;">Galleria</h1>
@@ -49,84 +107,62 @@
     </div>
     </header>
 
-    <h2 style="text-align: center;">Checkout Form</h2>
+    <script language="javascript">
+        function art(img, atr, name, artist, cost) {
+            this.img = img;
+            this.atr = atr;
+            this.name = name;
+            this.artist = artist;
+            this.cost = cost;
+        }
+
+        function printGrid(art_array) {
+            var str = "";
+            for (i = 0; i < art_array.length; i++) {
+                str += "<div class='card'>";
+                str += "<img src='" + art_array[i].img + "' attribute='" + art_array[i].atr + "'>";
+                str += "<h1>" + art_array[i].name + "</h1>";
+                str += "<div>" + art_array[i].artist + "</div>";
+                str += "<p class='price'>" + "$" + art_array[i].cost + "</p>";
+                str += "<p><button class='button' id='" + i + "'>Add to Cart</button></p>";
+                str += "</div>";
+            }
+            return str;
+        }
+    </script>
+
     <div class="row">
         <div class="col-75">
-            <div class="container">
-                <div class="grid-container">
-                    <div class="row">
-                        <div class="column">
-                            <div class="card">
-                                <img src="eabstract1.jpg" style="width:100%; height:auto;">
-                                <h1>Fall Forest</h1>
-                                <p class="price">$15</p>
-                                <p>Ann Der</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <img src="eabstract2.jpg"  style="width:100%; height:auto;">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$5</p>
-                                <p>Name of the artist: XXX</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <img src="eabstract3.jpg" style="width:100%; height:auto;">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$8</p>
-                                <p>Name of the artist: XXX.</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <div class="card">
-                                <img src="eevents1.jpg" style="width:100%; height:auto;">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$7</p>
-                                <p>Name of the artist: XXX</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <img src="eevents2.jpg" style="width:100%; height:auto;">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$19.99</p>
-                                <p>Name of the artist: XXX.</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <img src="eevents3.jpg" style="width:100%; height:auto;">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$10</p>
-                                <p>Name of the artist: XXX.</p>
-                                <p><button>Add to Cart</button></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid-container">
+                <script language="javascript">
+                    art_array = new Array (
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15"),
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15"),
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15"),
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15"),
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15"),
+                    new art("eabstract1.jpg", "Photo on Unsplash", "Fall Forest", "Ann Der", "15")
+                    );
+                    document.writeln(printGrid(art_array));
+                </script>
             </div>
         </div>
+
         <div class="col-25">
             <div class="container">
-                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                <p><a href="#">Picture 1</a> <span class="price">$15</span></p>
-                <p><a href="#">Picture 2</a> <span class="price">$5</span></p>
-                <p><a href="#">Picture 3</a> <span class="price">$8</span></p>
-                <p><a href="#">Picture 4</a> <span class="price">$2</span></p>
+                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b class="num_items">0</b></span></h4>
+                <div id="purchased_item"></div>
                 <hr>
-                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                <p>Total <span class="price" style="color:black"><b class="total">$0</b></span></p>
                  <a href="payment_page.html"><input type="submit" value="Checkout" class="btn"></a>
             </div>
         </div>
     </div>
+    <br/><br/>
+
+    <footer>
+        <p>©Galleria.Inc 2020 | All Rights Reserved</p>
+    </footer>
 </body>
+
 </html>
