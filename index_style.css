@@ -13,15 +13,18 @@ h2 {
 }
 
 .header {
-    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
     overflow: hidden;
     background-color: white;
     position: relative;
-    border-bottom: steelblue;
 }
 
 .header #navbar {
     display: none;
+    box-sizing: border-box;
+    background-color: white;
 }
 
 .header a {
@@ -39,14 +42,13 @@ h2 {
     top: 0;
 }
 
-.navbar a:hover {
+#navbar a:hover {
     background-color: lightgrey;
     color: white;
 }
 
 .active {
     background-color: white;
-    color: white;
 }
 
 a {
